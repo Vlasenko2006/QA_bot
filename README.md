@@ -1,11 +1,39 @@
 # QA_bot
 
+# Question-Answer Bot using GPT-2
+
+## Overview
+
+This project demonstrates the creation of a Question-Answer (QA) bot using a fine-tuned GPT-2 model. The bot is capable of answering questions based on a custom dataset. The code showcases several important skills relevant for a Data Scientist position, including data handling, model fine-tuning, and practical application development.
+
+## Features
+
+- **Data Handling and Preprocessing**: Loading and preparing datasets (e.g., SQuAD dataset).
+- **Model Fine-Tuning**: Fine-tuning a pre-trained language model (DistilGPT-2) on a custom dataset.
+- **Use of Transformer Models**: Utilizing advanced NLP models from the `transformers` library.
+- **Logging and Monitoring**: Setting up logging to track the training process.
+- **Model Evaluation**: Evaluating the model's performance by generating text before and after training.
+- **Practical Application**: Implementing a real-world application (QA bot).
 
 
----
 
 
-# HowTo run
+
+### Example Interaction
+
+After running the script, you can interact with the QA bot by asking questions. For example:
+
+```markdown
+Question: "What is the capital of France?"
+Answer 1: "The capital of France is Paris."
+Answer 2: "Paris is the capital of France."
+Answer 3: "France's capital city is Paris."
+```
+
+
+## Getting Started
+
+## Overview
 
 1. Install environment
 2. Get the data set
@@ -13,9 +41,17 @@
 3. Optionsl: Customize your `slurm` script
 4. Run
 
+
 ---
 
-# Environment Installation Instructions
+# Install environment
+
+### Prerequisites
+
+- Python 3.8 or higher
+- `pip` for package management
+
+
 
 ## Pip Insatllation
 
@@ -87,6 +123,19 @@ and this one:
 ## Via Python Script
 Run the script `download_dataset.py`. It will create a directory `squad` and download `.json` datasets there.
 
-#Convert the Data Set to `.txt` Format
+# Convert the Data Set to `.txt` Format
 Run the script `prepare_squad_dataset.py`
+
+
+# Run the code
+
+## In a Command Line (not recomended, just for debugging)
+Activate your virtual environment as discussed in section **Environment Installation Instructions** and run the code:
+### For Anaconda Environment:
+`python QA_bot.py`
+### For Pip Environment: 
+`qa_env_pip/bin/python3.10 QA_bot`
+## As Slurm job:
+Set all necessary variables in your `run.bash` script ( see more [here](https://slurm.schedmd.com/quickstart.html)   ) and run:
+`sbatch run.bash`
 
