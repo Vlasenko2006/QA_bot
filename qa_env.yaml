@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Define environment name
+ENV_NAME="gpt2_finetuning_env"
+
+# Create a new virtual environment
+python3 -m venv $ENV_NAME
+
+# Activate the virtual environment
+source $ENV_NAME/bin/activate
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Install the required packages
+pip install torch transformers tqdm
+
+# Deactivate the virtual environment
+deactivate
+
+echo "Setup complete. To activate the environment, run 'source $ENV_NAME/bin/activate'."
+
+#source gpt2_finetuning_env/bin/activate
