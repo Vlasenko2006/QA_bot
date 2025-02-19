@@ -1,6 +1,4 @@
-# QA_bot
-
-# Question-Answer Bot using GPT-2
+# Question-Answer Bot based on fine tuning GPT-2
 
 ## Overview
 
@@ -14,9 +12,6 @@ This project demonstrates the creation of a Question-Answer (QA) bot using a fin
 - **Logging and Monitoring**: Setting up logging to track the training process.
 - **Model Evaluation**: Evaluating the model's performance by generating text before and after training.
 - **Practical Application**: Implementing a real-world application (QA bot).
-
-
-
 
 
 ### Example Interaction
@@ -90,7 +85,7 @@ You should see the versions of the installed packages printed out without any er
 
 Follow the steps below to set up and install the dependencies for the QA bot.
 
-## Step 1: Create a Virtual Environment
+### Step 1: Create a Virtual Environment
 
 First, ensure you have `conda` installed on your machine. You can download and install Anaconda from [here](https://www.anaconda.com/products/distribution).
 
@@ -102,7 +97,7 @@ conda env create -f environment.yaml
 
 This will create a new environment named `qa_bot_env` and install all the necessary dependencies.
 
-## Step 2: Activate the Virtual Environment
+### Step 2: Activate the Virtual Environment
 
 Activate the newly created conda environment:
 
@@ -110,7 +105,7 @@ Activate the newly created conda environment:
 conda activate qa_bot_env
 ```
 
-# Getting Data Sets
+## Getting Data Sets
 
 
 ## Via `wget`
@@ -123,19 +118,19 @@ and this one:
 ## Via Python Script
 Run the script `download_dataset.py`. It will create a directory `squad` and download `.json` datasets there.
 
-# Convert the Data Set to `.txt` Format
+## Convert the Data Set to `.txt` Format
 Run the script `prepare_squad_dataset.py`
 
 
-# Run the code
+## Run the code
 
-## In a Command Line (not recomended, just for debugging)
+### In a Command Line (not recomended, just for debugging)
 Activate your virtual environment as discussed in section **Environment Installation Instructions** and run the code:
-### For Anaconda Environment:
+#### For Anaconda Environment:
 `python QA_bot.py`
-### For Pip Environment: 
+#### For Pip Environment: 
 `qa_env_pip/bin/python3.10 QA_bot`
-## As Slurm job:
+### As Slurm job:
 Set all necessary variables in your `run.bash` script ( see more [here](https://slurm.schedmd.com/quickstart.html)   ) and run:
 `sbatch run.bash`
 
