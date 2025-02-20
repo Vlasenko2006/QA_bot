@@ -4,14 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QA Bot</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.2em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="text"] {
+            width: calc(100% - 30px);
+            padding: 15px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #answer {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 1.2em;
+            color: #333;
+            max-width: 600px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <h1>Question Answering Bot</h1>
-    <form action="/ask" method="post">
-        <label for="question">Enter your question:</label><br><br>
-        <input type="text" id="question" name="question" required><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <p>This is an amazing chat-bot that answers all your questions and even predicts the future.</p>
+    <div class="form-container">
+        <form action="/ask" method="post">
+            <label for="question">Enter your question:</label><br><br>
+            <input type="text" id="question" name="question" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
     <div id="answer">
         <!-- Answer will be displayed here -->
     </div>
